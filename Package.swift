@@ -6,6 +6,7 @@ let package = Package(
     name: "EasyEnvironment",
     products: [
         .library(name: "EasyEnvironment", targets: ["EasyEnvironment"]),
+        .library(name: "EasyAppEnvironment", targets: ["EasyAppEnvironment"]),
     ],
     dependencies: [
         .package(
