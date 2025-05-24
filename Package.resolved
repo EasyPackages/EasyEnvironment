@@ -1,13 +1,13 @@
 {
-  "originHash" : "38fc6f00e91a0b68dfd4a78798a30663f2153c659acec1ea557dc5b98f1f2df5",
+  "originHash" : "8f5f0cdeb21614baa4cb7b09a05e342a3d36bea7c80c811a615593527c90c5c4",
   "pins" : [
     {
       "identity" : "easycore",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/EasyPackages/EasyCore",
       "state" : {
-        "branch" : "main",
-        "revision" : "e1b57ff5fb00a4f41d6c92ed269a002ea8783df2"
+        "revision" : "e1b57ff5fb00a4f41d6c92ed269a002ea8783df2",
+        "version" : "0.0.1"
       }
     }
   ],
