@@ -1,24 +1,31 @@
 // swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "EasyEnvironment",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "EasyEnvironment",
-            targets: ["EasyEnvironment"]),
+        .library(name: "EasyEnvironment", targets: ["EasyEnvironment"]),
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/EasyPackages/EasyCore",
+            branch: "main"
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .target(name: "EasyEnvironment"),
+        
         .target(
-            name: "EasyEnvironment"),
+            name: "EasyAppEnvironment",
+            dependencies: [
+                "EasyEnvironment",
+                "EasyCore"
+            ]
+        ),
         .testTarget(
-            name: "EasyEnvironmentTests",
-            dependencies: ["EasyEnvironment"]
+            name: "EasyAppEnvironmentTests",
+            dependencies: ["EasyAppEnvironment"]
         ),
     ]
 )
