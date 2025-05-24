@@ -9,10 +9,7 @@ let package = Package(
         .library(name: "EasyAppEnvironment", targets: ["EasyAppEnvironment"]),
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/EasyPackages/EasyCore",
-            branch: "main"
-        )
+        .package(url: "https://github.com/EasyPackages/EasyCore.git", from: "1.0.0")
     ],
     targets: [
         .target(name: "EasyEnvironment"),
